@@ -327,7 +327,8 @@ module.exports = class AtomWindow extends EventEmitter {
   }
 
   replaceEnvironment(env) {
-    this.browserWindow.webContents.send('environment', env);
+    console.log('This is the config env', env)
+    this.browserWindow.webContents.send('environment', {});
   }
 
   sendMessage(message, detail) {
